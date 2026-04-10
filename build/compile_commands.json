@@ -1,0 +1,17 @@
+[
+{
+  "directory": "/home/orlandoemanuelflorescastillo/Documentos/LoxMyFirstLanguage/build",
+  "command": "/home/orlandoemanuelflorescastillo/Documentos/LLVM/llvm-project/build/bin/clang++ -I/home/orlandoemanuelflorescastillo/Documentos/LoxMyFirstLanguage/include -g -std=gnu++20 -o CMakeFiles/lox.dir/src/Scanner.cpp.o -c /home/orlandoemanuelflorescastillo/Documentos/LoxMyFirstLanguage/src/Scanner.cpp",
+  "file": "/home/orlandoemanuelflorescastillo/Documentos/LoxMyFirstLanguage/src/Scanner.cpp"
+},
+{
+  "directory": "/home/orlandoemanuelflorescastillo/Documentos/LoxMyFirstLanguage/build",
+  "command": "/home/orlandoemanuelflorescastillo/Documentos/LLVM/llvm-project/build/bin/clang++ -I/home/orlandoemanuelflorescastillo/Documentos/LoxMyFirstLanguage/include -g -std=gnu++20 -o CMakeFiles/lox.dir/src/Lox.cpp.o -c /home/orlandoemanuelflorescastillo/Documentos/LoxMyFirstLanguage/src/Lox.cpp",
+  "file": "/home/orlandoemanuelflorescastillo/Documentos/LoxMyFirstLanguage/src/Lox.cpp"
+},
+{
+  "directory": "/home/orlandoemanuelflorescastillo/Documentos/LoxMyFirstLanguage/build",
+  "command": "/home/orlandoemanuelflorescastillo/Documentos/LLVM/llvm-project/build/bin/clang++ -I/home/orlandoemanuelflorescastillo/Documentos/LoxMyFirstLanguage/include -g -std=gnu++20 -o CMakeFiles/lox.dir/src/AstPrinter.cpp.o -c /home/orlandoemanuelflorescastillo/Documentos/LoxMyFirstLanguage/src/AstPrinter.cpp",
+  "file": "/home/orlandoemanuelflorescastillo/Documentos/LoxMyFirstLanguage/src/AstPrinter.cpp"
+}
+]
