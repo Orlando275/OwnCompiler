@@ -1,0 +1,16 @@
+build/
+bin/
+out/
+.cache/
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+.vscode/
+prueba
+*.exe
+*.out
+*.app
+*.log
+.DS_Store
+hola.txt
