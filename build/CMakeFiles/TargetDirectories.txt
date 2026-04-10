@@ -1,3 +1,0 @@
-/home/orlandoemanuelflorescastillo/Documentos/LoxMyFirstLanguage/build/CMakeFiles/lox.dir
-/home/orlandoemanuelflorescastillo/Documentos/LoxMyFirstLanguage/build/CMakeFiles/edit_cache.dir
-/home/orlandoemanuelflorescastillo/Documentos/LoxMyFirstLanguage/build/CMakeFiles/rebuild_cache.dir
