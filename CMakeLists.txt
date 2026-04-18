@@ -9,5 +9,10 @@ add_executable(lox
     src/Lox.cpp
     src/AstPrinter.cpp
 )
-
 target_include_directories(lox PRIVATE include)
+
+add_executable(test_astprinter
+    src/AstPrinter.cpp
+    tests/AstPrinterTest.cpp
+)
+target_include_directories(test_astprinter PRIVATE include)

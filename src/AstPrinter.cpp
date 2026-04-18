@@ -1,5 +1,6 @@
 #include "AstPrinter.h"
 #include "Token.h"
+#include <memory>
 
 std::string MyLanguage::AstPrinter::print(Expr &expr)
 {

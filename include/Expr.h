@@ -26,23 +26,27 @@ namespace MyLanguage
     {
       public:
         virtual ~Expr() = default;
-        template <typename R> R accept(Visitor<R> &visitor);
+        virtual std::string accept(Visitor<std::string> &visitor) = 0;
     };
 
-    class Binary : public Expr
+    class Binary : public Expr // sirve para mostrar como es la estructura de
+                               // una clase binary
     {
       public:
         std::unique_ptr<Expr> left;
         Token op;
         std::unique_ptr<Expr> right;
 
+        /*se ocupan punteros para demarcar que ahi puede caber otra clase ero el
+         * compilador sabe de que tamaño hacerlo*/
         Binary(std::unique_ptr<Expr> left, Token op,
                std::unique_ptr<Expr> right)
             : left(std::move(left)), op(op), right(std::move(right))
         {
         }
 
-        template <typename R> R accept(Visitor<R> &visitor)
+        // implementacion del temaplate accept utilizando visitor
+        std::string accept(Visitor<std::string> &visitor) override
         {
             return visitor.visitBinary(*this);
         }
@@ -59,7 +63,7 @@ namespace MyLanguage
         {
         }
 
-        template <typename R> R accept(Visitor<R> &visitor)
+        std::string accept(Visitor<std::string> &visitor) override
         {
             return visitor.visitUnary(*this);
         }
@@ -72,7 +76,7 @@ namespace MyLanguage
 
         Literal(std::any value) : value(std::move(value)) {}
 
-        template <typename R> R accept(Visitor<R> &visitor)
+        std::string accept(Visitor<std::string> &visitor) override
         {
             return visitor.visitLiteral(*this);
         }
@@ -88,7 +92,7 @@ namespace MyLanguage
         {
         }
 
-        template <typename R> R accept(Visitor<R> &visitor)
+        std::string accept(Visitor<std::string> &visitor) override
         {
             return visitor.visitGrouping(*this);
         }

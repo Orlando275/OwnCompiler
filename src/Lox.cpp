@@ -4,6 +4,7 @@
 #include <iostream>
 #include <sstream>
 #include <stdexcept>
+bool MyLanguage::Lox::handError = false;
 
 void MyLanguage::Lox::run(const std::string &source)
 {
