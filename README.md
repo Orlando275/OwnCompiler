@@ -1,62 +1,62 @@
-# Lox — Mi primer lenguaje (port a C++)
+# Lox — My First Language (C++ port)
 
-Intérprete del lenguaje **Lox** implementado en **C++**, siguiendo el libro
-[*Crafting Interpreters*](https://craftinginterpreters.com/) de Robert Nystrom.
+An interpreter for the **Lox** language implemented in **C++**, following the book
+[*Crafting Interpreters*](https://craftinginterpreters.com/) by Robert Nystrom.
 
-El libro construye el intérprete `jlox` en **Java**; este proyecto es una
-**traducción a C++ moderno (C++20)** hecha como ejercicio de aprendizaje, tanto
-del funcionamiento interno de un intérprete como del propio lenguaje C++.
+The book builds the `jlox` interpreter in **Java**; this project is a
+**translation to modern C++ (C++20)**, done as a learning exercise — both to
+understand how an interpreter works internally and to practice C++ itself.
 
-## ¿Qué es esto?
+## What is this?
 
-Lox es un lenguaje de scripting dinámico con funciones, closures, clases y
-herencia. Aquí se reimplementa desde cero su intérprete de árbol
-(*tree-walking interpreter*), reescribiendo en C++ cada etapa que el libro
-presenta en Java:
+Lox is a dynamic scripting language with functions, closures, classes and
+inheritance. This project reimplements its tree-walking interpreter from
+scratch, rewriting in C++ each stage the book presents in Java:
 
-- **Scanner / Lexer** — convierte el código fuente en tokens.
-- **Parser** — construye el Árbol de Sintaxis Abstracta (AST) a partir de los tokens.
-- **AST Printer** — recorre el árbol y lo imprime (útil para depurar el parser).
-- **Intérprete** — evalúa el árbol y ejecuta el programa *(en progreso)*.
+- **Scanner / Lexer** — turns the source code into tokens.
+- **Parser** — builds the Abstract Syntax Tree (AST) from the tokens.
+- **AST Printer** — walks the tree and prints it (handy for debugging the parser).
+- **Interpreter** — evaluates the tree and runs the program *(in progress)*.
 
-Se puede usar de dos formas, igual que en el libro:
+It can be used in two ways, just like in the book:
 
-- **REPL** — modo interactivo, ejecutando `lox` sin argumentos.
-- **Archivo** — ejecutando un script con `lox script.lox`.
+- **REPL** — interactive mode, running `lox` with no arguments.
+- **File** — running a script with `lox script.lox`.
 
-## Estructura del proyecto
+## Project structure
 
 ```
-include/    Cabeceras (Scanner, Parser, Expr, Token, TokenType, AstPrinter, Lox)
-src/        Implementaciones (.cpp)
-tests/      Pruebas (AstPrinterTest)
-tools/      Utilidades
+include/    Headers (Scanner, Parser, Expr, Token, TokenType, AstPrinter, Lox)
+src/        Implementations (.cpp)
+tests/      Tests (AstPrinterTest)
+tools/      Utilities
 CMakeLists.txt
 ```
 
-## Compilar y ejecutar
+## Build and run
 
-Requiere **CMake ≥ 3.16** y un compilador con soporte de **C++20**.
+Requires **CMake ≥ 3.16** and a compiler with **C++20** support.
 
 ```bash
 cmake -S . -B build
 cmake --build build
 
-# REPL interactivo
+# Interactive REPL
 ./build/lox
 
-# Ejecutar un archivo
+# Run a file
 ./build/lox script.lox
 
-# Correr las pruebas
+# Run the tests
 ./build/test_astprinter
 ```
 
-## Estado
+## Status
 
-🚧 En desarrollo. Actualmente están implementados el scanner, el parser y el
-AST printer; el intérprete y las siguientes etapas del libro se irán añadiendo.
+🚧 Work in progress. The scanner, parser and AST printer are currently
+implemented; the interpreter and the following stages of the book will be
+added next.
 
-## Referencia
+## Reference
 
-- Libro: [*Crafting Interpreters*](https://craftinginterpreters.com/) — Robert Nystrom
+- Book: [*Crafting Interpreters*](https://craftinginterpreters.com/) — Robert Nystrom
